@@ -65,3 +65,37 @@ CREATE TABLE Clinics (
     CONSTRAINT `chk_clinic_email` CHECK (`Email` like '%@%.%')
 
 );
+
+-- 4. Create Doctors Table (Can now safely reference Clinics)
+
+CREATE TABLE Doctors (
+
+    DoctorID BIGINT NOT NULL AUTO_INCREMENT,
+
+    ClinicID BIGINT NOT NULL,
+
+    DoctorName VARCHAR(50) NOT NULL,
+
+    DoctorSurname VARCHAR(50) NOT NULL,
+
+    Speciality VARCHAR(50) NOT NULL,
+
+    Email VARCHAR(100),
+
+    PhoneNumber BIGINT NOT NULL,
+
+    DateBirth DATE NOT NULL,
+
+    ActiveOrNot BOOLEAN DEFAULT TRUE,
+
+    PRIMARY KEY (DoctorID),
+
+    UNIQUE KEY `unique_doctor` (`DoctorName`, `DoctorSurname`, `DateBirth`),
+
+    KEY `fk_doctor_clinic` (`ClinicID`),
+
+    CONSTRAINT `fk_doctor_clinic` FOREIGN KEY (`ClinicID`) REFERENCES `Clinics` (`ClinicID`),
+
+    CONSTRAINT `chk_doctor_email` CHECK (`Email` LIKE '%@%.%')
+
+);
