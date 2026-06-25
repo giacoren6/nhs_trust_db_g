@@ -15,3 +15,33 @@ CREATE TABLE Medications (
     PRIMARY KEY (MedicationID)
 
 );
+
+-- 2. Create Patients Table (No dependencies)
+
+CREATE TABLE Patients (
+
+    PatientID BIGINT NOT NULL AUTO_INCREMENT,
+
+    PatientName VARCHAR(50) NOT NULL,
+
+    PatientSurname VARCHAR(50) NOT NULL,
+
+    PhoneNumber BIGINT NOT NULL,
+
+    Email VARCHAR(100) NOT NULL,
+
+    NHSnumber BIGINT NOT NULL,
+
+    Address VARCHAR(255),
+
+    DateBirth DATE NOT NULL,
+
+    ActiveOrNot BOOLEAN DEFAULT TRUE,
+
+    PRIMARY KEY (PatientID),
+
+    UNIQUE KEY `unique_patient` (`PatientName`,`PatientSurname`,`DateBirth`),
+
+    CONSTRAINT `chk_patient_email` CHECK ((`Email` like '%@%.%'))
+
+);
