@@ -45,3 +45,23 @@ CREATE TABLE Patients (
     CONSTRAINT `chk_patient_email` CHECK ((`Email` like '%@%.%'))
 
 );
+
+-- 3. Create Clinics Table (Moved UP so Doctors can reference it)
+
+CREATE TABLE Clinics (
+
+    ClinicID BIGINT NOT NULL AUTO_INCREMENT,
+
+    ClinicName VARCHAR(150) NOT NULL,
+
+    ClinicAddress VARCHAR(255),
+
+    PhoneNumber BIGINT NOT NULL,
+
+    Email VARCHAR(100),
+
+    PRIMARY KEY (ClinicID),
+
+    CONSTRAINT `chk_clinic_email` CHECK (`Email` like '%@%.%')
+
+);
