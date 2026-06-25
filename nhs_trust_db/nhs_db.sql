@@ -137,4 +137,38 @@ CREATE TABLE Appointments (
     CONSTRAINT chk_appointment_time CHECK (HOUR(AppointmentTime) >= 8 AND HOUR(AppointmentTime) < 20)
 
 );
+
+-- 6. Create Prescriptions Table (Created LAST because it depends on Appointments)
+
+CREATE TABLE Prescriptions (
+
+    PrescriptionID BIGINT NOT NULL AUTO_INCREMENT,
+
+    AppointmentID BIGINT DEFAULT NULL,
+
+    MedicationID BIGINT NOT NULL,
+
+    RepeatedPrescription BOOLEAN NOT NULL DEFAULT FALSE,
+
+    Dosage varchar(100) NOT NULL,
+
+    DateIssued DATE NOT NULL,
+
+    PatientID BIGINT NOT NULL,
+
+    DoctorID BIGINT,
+
+    PRIMARY KEY (PrescriptionID),
+
+    CONSTRAINT FK_Prescription_Medication FOREIGN KEY (MedicationID) REFERENCES Medications(MedicationID),
+
+    CONSTRAINT FK_Prescription_Patient FOREIGN KEY (PatientID) REFERENCES Patients(PatientID),
+
+    CONSTRAINT FK_Prescription_Doctor FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID),
+
+    CONSTRAINT FK_Prescription_Appointment FOREIGN KEY (AppointmentID) REFERENCES Appointments(AppointmentID),
+
+    CONSTRAINT chk_prescription_date CHECK (DateIssued = CURRENT_DATE())
+
+);
  
