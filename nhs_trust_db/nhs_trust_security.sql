@@ -92,3 +92,12 @@ TO 'patient_user'@'localhost';
 -- ==========================================
 
 FLUSH PRIVILEGES;
+
+
+-- ==========================================
+-- Check user permissions
+-- ==========================================
+
+SHOW GRANTS FOR 'doctor_user'@'localhost';
+SHOW GRANTS FOR 'reception_user'@'localhost';
+SHOW GRANTS FOR 'patient_user'@'localhost';
