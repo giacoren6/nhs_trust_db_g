@@ -86,3 +86,9 @@ TO 'patient_user'@'localhost';
 GRANT SELECT
 ON NHS_Trust_DB.Prescriptions
 TO 'patient_user'@'localhost';
+
+-- ==========================================
+-- Apply privileges
+-- ==========================================
+
+FLUSH PRIVILEGES;
