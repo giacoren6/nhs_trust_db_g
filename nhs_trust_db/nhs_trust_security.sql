@@ -64,3 +64,11 @@ TO 'reception_user'@'localhost';
 GRANT SELECT, INSERT, UPDATE
 ON NHS_Trust_DB.Appointments
 TO 'reception_user'@'localhost';
+
+GRANT SELECT
+ON NHS_Trust_DB.Clinics
+TO 'reception_user'@'localhost';
+
+GRANT SELECT
+ON NHS_Trust_DB.Doctors
+TO 'reception_user'@'localhost';
