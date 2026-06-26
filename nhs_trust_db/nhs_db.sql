@@ -207,3 +207,9 @@ UNIQUE (
     AppointmentDate,
     AppointmentTime
 );
+
+CONSTRAINT fk_doctor_clinic
+FOREIGN KEY (ClinicID)
+REFERENCES Clinics(ClinicID)
+ON DELETE RESTRICT
+ON UPDATE CASCADE
