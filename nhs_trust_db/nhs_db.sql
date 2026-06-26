@@ -2,7 +2,7 @@ CREATE DATABASE NHS_Trust_DB;
 
 USE NHS_Trust_DB;
  
--- 1. Create Medications Table (No dependencies)
+-- 1. Create Medications Table 
 
 CREATE TABLE Medications (
 
@@ -16,7 +16,7 @@ CREATE TABLE Medications (
 
 );
 
--- 2. Create Patients Table (No dependencies)
+-- 2. Create Patients Table 
 
 CREATE TABLE Patients (
 
@@ -46,7 +46,7 @@ CREATE TABLE Patients (
 
 );
 
--- 3. Create Clinics Table (Moved UP so Doctors can reference it)
+-- 3. Create Clinics Table 
 
 CREATE TABLE Clinics (
 
@@ -66,7 +66,7 @@ CREATE TABLE Clinics (
 
 );
 
--- 4. Create Doctors Table (Can now safely reference Clinics)
+-- 4. Create Doctors Table 
 
 CREATE TABLE Doctors (
 
@@ -100,7 +100,7 @@ CREATE TABLE Doctors (
 
 );
 
--- 5. Create Appointments Table (Moved UP so Prescriptions can reference it)
+-- 5. Create Appointments Table 
 
 CREATE TABLE Appointments (
 
@@ -138,7 +138,7 @@ CREATE TABLE Appointments (
 
 );
 
--- 6. Create Prescriptions Table (Created LAST because it depends on Appointments)
+-- 6. Create Prescriptions Table 
 
 CREATE TABLE Prescriptions (
 
@@ -198,4 +198,12 @@ CHECK (
         OR
         (MONTH(DateBirth) = 2 AND DAY(DateBirth) BETWEEN 1 AND 29)
     )
+);
+
+ALTER TABLE Appointments
+ADD CONSTRAINT uq_doctor_slot
+UNIQUE (
+    DoctorID,
+    AppointmentDate,
+    AppointmentTime
 );
