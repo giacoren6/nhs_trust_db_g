@@ -84,3 +84,24 @@ DELIMITER ;
 
 -- Run the stored procedure
 CALL GetPatientPrescriptions(1);
+
+
+
+
+-- Query 5: Count prescriptions issued by each doctor
+-- Uses COUNT, LEFT JOIN, GROUP BY and ORDER BY
+
+
+SELECT
+    d.DoctorID,
+    d.DoctorName,
+    d.DoctorSurname,
+    COUNT(pr.PrescriptionID) AS TotalPrescriptions
+FROM Doctors d
+LEFT JOIN Prescriptions pr
+ON d.DoctorID = pr.DoctorID
+GROUP BY
+    d.DoctorID,
+    d.DoctorName,
+    d.DoctorSurname
+ORDER BY TotalPrescriptions DESC;
