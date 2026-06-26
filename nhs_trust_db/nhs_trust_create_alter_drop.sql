@@ -13,4 +13,11 @@ CREATE TABLE Specialities (
     CONSTRAINT FK_Speciality_Clinic FOREIGN KEY (ClinicID) REFERENCES Clinics(ClinicID)
 
 );
+
+-- B. ALTER
+
+ALTER TABLE Specialities 
+
+ADD COLUMN Description TEXT;
+
  
