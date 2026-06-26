@@ -72,3 +72,17 @@ TO 'reception_user'@'localhost';
 GRANT SELECT
 ON NHS_Trust_DB.Doctors
 TO 'reception_user'@'localhost';
+
+
+-- ==========================================
+-- Patient role
+-- Patients only have read access
+-- ==========================================
+
+GRANT SELECT
+ON NHS_Trust_DB.Patients
+TO 'patient_user'@'localhost';
+
+GRANT SELECT
+ON NHS_Trust_DB.Prescriptions
+TO 'patient_user'@'localhost';
