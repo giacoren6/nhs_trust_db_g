@@ -81,3 +81,24 @@ INSERT INTO Prescriptions (AppointmentID, MedicationID, Dosage, DateIssued, Pati
 (NULL, 2, 'Finish course', '2026-07-14', 15, NULL),
 (NULL, 5, 'As needed', '2026-07-15', 16, NULL),
 (NULL, 1, '500mg', '2026-07-16', 17, NULL);
+
+UPDATE Patients SET Address = '10 High Street, London' WHERE PatientID = 1;
+UPDATE Patients SET Address = '12 Church Road, London' WHERE PatientID = 2;
+UPDATE Patients SET Address = '14 Station Road, Manchester' WHERE PatientID = 3;
+UPDATE Patients SET Address = '16 Main Street, Birmingham' WHERE PatientID = 4;
+UPDATE Patients SET Address = '18 Park Lane, Leeds' WHERE PatientID = 5;
+UPDATE Patients SET Address = '20 Victoria Road, Liverpool' WHERE PatientID = 6;
+UPDATE Patients SET Address = '22 London Road, Bristol' WHERE PatientID = 7;
+UPDATE Patients SET Address = '24 Queens Road, Sheffield' WHERE PatientID = 8;
+UPDATE Patients SET Address = '26 New Street, Newcastle' WHERE PatientID = 9;
+UPDATE Patients SET Address = '28 High Street, Nottingham' WHERE PatientID = 10;
+UPDATE Patients SET Address = '30 Church Lane, Leicester' WHERE PatientID = 11;
+UPDATE Patients SET Address = '32 King Street, Coventry' WHERE PatientID = 12;
+UPDATE Patients SET Address = '34 Green Lane, Southampton' WHERE PatientID = 13;
+UPDATE Patients SET Address = '36 Mill Lane, Portsmouth' WHERE PatientID = 14;
+UPDATE Patients SET Address = '38 The Avenue, Plymouth' WHERE PatientID = 15;
+UPDATE Patients SET Address = '40 Grange Road, Brighton' WHERE PatientID = 16;
+UPDATE Patients SET Address = '42 School Lane, Reading' WHERE PatientID = 17;
+UPDATE Patients SET Address = '44 Grove Road, Oxford' WHERE PatientID = 18;
+UPDATE Patients SET Address = '46 Broad Street, Cambridge' WHERE PatientID = 19;
+UPDATE Patients SET Address = '48 Bridge Street, Bath' WHERE PatientID = 20;
