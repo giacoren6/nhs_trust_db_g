@@ -105,3 +105,4 @@ GROUP BY
     d.DoctorName,
     d.DoctorSurname
 ORDER BY TotalPrescriptions DESC;
+
