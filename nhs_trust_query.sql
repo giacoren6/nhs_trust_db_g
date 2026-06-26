@@ -52,3 +52,35 @@ JOIN Medications m
 ON pr.MedicationID = m.MedicationID
 LEFT JOIN Appointments a 
 ON pr.AppointmentID = a.AppointmentID;
+
+
+-- Query 4: Stored Procedure
+-- Gets all prescriptions for one patient by PatientID
+-- DROP PROCEDURE avoids the "already exists" error
+
+
+DROP PROCEDURE IF EXISTS GetPatientPrescriptions;
+
+DELIMITER //
+
+CREATE PROCEDURE GetPatientPrescriptions(IN patient_id BIGINT)
+BEGIN
+    SELECT 
+        p.PatientName,
+        p.PatientSurname,
+        m.MedicationName,
+        pr.Dosage,
+        pr.DateIssued,
+        pr.RepeatedPrescription
+    FROM Prescriptions pr
+    JOIN Patients p 
+    ON pr.PatientID = p.PatientID
+    JOIN Medications m 
+    ON pr.MedicationID = m.MedicationID
+    WHERE p.PatientID = patient_id;
+END //
+
+DELIMITER ;
+
+-- Run the stored procedure
+CALL GetPatientPrescriptions(1);
