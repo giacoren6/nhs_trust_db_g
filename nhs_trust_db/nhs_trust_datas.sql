@@ -33,3 +33,15 @@ INSERT INTO Patients (PatientName, PatientSurname, PhoneNumber, Email, NHSnumber
 ('Charlotte', 'Robinson', 7400100018, 'charlotte@email.com', 1018, '1994-06-21'),
 ('Christopher', 'Clark', 7400100019, 'chris@email.com', 1019, '1972-07-07'),
 ('Amelia', 'Rodriguez', 7400100020, 'amelia@email.com', 1020, '1997-08-30');
+
+-- 4. DOCTORS 
+INSERT INTO Doctors (ClinicID, DoctorName, DoctorSurname, Speciality, Email, PhoneNumber, DateBirth) VALUES
+(1, 'John', 'Smith', 'Cardiologist', 'jsmith1@clinic.co.uk', 7700900001, '1975-05-15'),
+(1, 'Alice', 'Smith', 'Cardiologist', 'asmith@clinic.co.uk', 7700900002, '1982-08-20'),
+(1, 'Sarah', 'Derm', 'Dermatologist', 'sderm@clinic.co.uk', 7700900003, '1970-12-01'),
+(2, 'Emily', 'Brown', 'Pediatrician', 'ebrown@clinic.co.uk', 7700900004, '1985-03-10'),
+(2, 'Michael', 'Brown', 'Dermatologist', 'mbrown@clinic.co.uk', 7700900005, '1968-07-22'),
+(2, 'David', 'Wilson', 'Pediatrician', 'dwilson@clinic.co.uk', 7700900006, '1980-11-30'),
+(3, 'Robert', 'Taylor', 'Neurologist', 'rtaylor@clinic.co.uk', 7700900007, '1978-01-14'),
+(3, 'Laura', 'Taylor', 'Neurologist', 'ltaylor@clinic.co.uk', 7700900008, '1983-09-05'),
+(3, 'James', 'Anderson', 'Orthopedist', 'janderson@clinic.co.uk', 7700900009, '1972-04-18');
