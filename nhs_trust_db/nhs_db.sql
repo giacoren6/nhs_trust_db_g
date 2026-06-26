@@ -192,3 +192,26 @@ CHECK (
     DateBirth BETWEEN '1920-01-01' AND '2001-12-31'
 );
 
+ALTER TABLE Appointments
+ADD CONSTRAINT uq_doctor_slot
+UNIQUE (
+    DoctorID,
+    AppointmentDate,
+    AppointmentTime
+);
+
+ALTER TABLE Appointments
+ADD CONSTRAINT uq_patient_slot
+UNIQUE (
+    PatientID,
+    AppointmentDate,
+    AppointmentTime
+);
+
+ALTER TABLE Doctors DROP FOREIGN KEY fk_doctor_clinic;
+
+ALTER TABLE Doctors 
+ADD CONSTRAINT fk_doctor_clinic 
+FOREIGN KEY (ClinicID) REFERENCES Clinics(ClinicID) 
+ON DELETE RESTRICT 
+ON UPDATE CASCADE;
