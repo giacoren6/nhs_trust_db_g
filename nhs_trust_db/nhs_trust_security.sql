@@ -20,3 +20,12 @@ CREATE USER 'doctor_user'@'localhost' IDENTIFIED BY 'Doctor1!';
 CREATE USER 'reception_user'@'localhost' IDENTIFIED BY 'Reception1!';
 CREATE USER 'patient_user'@'localhost' IDENTIFIED BY 'Patient1!';
 
+-- ==========================================
+-- Admin role
+-- Full access to the whole database
+-- ==========================================
+
+GRANT ALL PRIVILEGES
+ON NHS_Trust_DB.*
+TO 'admin_user'@'localhost';
+
