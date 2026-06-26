@@ -177,3 +177,10 @@ DROP CHECK chk_patient_datebirth;
  
 ALTER TABLE Doctors
 DROP CHECK chk_doctor_datebirth;
+
+-- Patients: valid birth date range
+ALTER TABLE Patients
+ADD CONSTRAINT chk_patient_datebirth
+CHECK (
+    DateBirth BETWEEN '1920-01-01' AND '2026-12-31'
+);
