@@ -1,0 +1,16 @@
+-- A. CREATE
+
+CREATE TABLE Specialities (
+
+    SpecialityID BIGINT NOT NULL AUTO_INCREMENT,
+
+    SpecialityName VARCHAR(100) NOT NULL,
+
+    ClinicID BIGINT NOT NULL,
+
+    PRIMARY KEY (SpecialityID),
+
+    CONSTRAINT FK_Speciality_Clinic FOREIGN KEY (ClinicID) REFERENCES Clinics(ClinicID)
+
+);
+ 

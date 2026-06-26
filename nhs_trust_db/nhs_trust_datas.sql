@@ -102,3 +102,4 @@ UPDATE Patients SET Address = '42 School Lane, Reading' WHERE PatientID = 17;
 UPDATE Patients SET Address = '44 Grove Road, Oxford' WHERE PatientID = 18;
 UPDATE Patients SET Address = '46 Broad Street, Cambridge' WHERE PatientID = 19;
 UPDATE Patients SET Address = '48 Bridge Street, Bath' WHERE PatientID = 20;
+
