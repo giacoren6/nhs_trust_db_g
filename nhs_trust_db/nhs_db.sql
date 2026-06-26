@@ -184,3 +184,10 @@ ADD CONSTRAINT chk_patient_datebirth
 CHECK (
     DateBirth BETWEEN '1920-01-01' AND '2026-12-31'
 );
+
+-- Doctors: valid birth date range
+ALTER TABLE Doctors
+ADD CONSTRAINT chk_doctor_datebirth
+CHECK (
+    DateBirth BETWEEN '1920-01-01' AND '2001-12-31'
+);
