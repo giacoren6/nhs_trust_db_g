@@ -191,3 +191,4 @@ ADD CONSTRAINT chk_doctor_datebirth
 CHECK (
     DateBirth BETWEEN '1920-01-01' AND '2001-12-31'
 );
+
