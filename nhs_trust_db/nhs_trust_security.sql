@@ -39,3 +39,6 @@ GRANT SELECT
 ON NHS_Trust_DB.Patients
 TO 'doctor_user'@'localhost';
 
+GRANT SELECT
+ON NHS_Trust_DB.Medications
+TO 'doctor_user'@'localhost';
