@@ -20,4 +20,8 @@ ALTER TABLE Specialities
 
 ADD COLUMN Description TEXT;
 
+-- C. TRUNCATE
+
+TRUNCATE TABLE Specialities;
+
  
