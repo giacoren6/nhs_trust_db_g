@@ -50,3 +50,13 @@ TO 'doctor_user'@'localhost';
 GRANT SELECT
 ON NHS_Trust_DB.Appointments
 TO 'doctor_user'@'localhost';
+
+-- ==========================================
+-- Receptionist role
+-- Receptionists can manage patient details and appointments
+-- They cannot access prescriptions
+-- ==========================================
+
+GRANT SELECT, INSERT, UPDATE
+ON NHS_Trust_DB.Patients
+TO 'reception_user'@'localhost';
