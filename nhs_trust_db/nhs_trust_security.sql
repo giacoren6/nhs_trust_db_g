@@ -99,3 +99,12 @@ FLUSH PRIVILEGES;
 SHOW GRANTS FOR 'doctor_user'@'localhost';
 SHOW GRANTS FOR 'reception_user'@'localhost';
 SHOW GRANTS FOR 'patient_user'@'localhost';
+
+
+-- Data Protection Using SHA2 Hashing
+-- Demonstrates how sensitive information such as
+-- passwords can be securely stored.
+
+SELECT
+    'Patient1!' AS OriginalPassword,
+    SHA2('Patient1!', 256) AS HashedPassword;
