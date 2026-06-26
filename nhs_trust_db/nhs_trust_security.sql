@@ -29,3 +29,13 @@ GRANT ALL PRIVILEGES
 ON NHS_Trust_DB.*
 TO 'admin_user'@'localhost';
 
+-- ==========================================
+-- Doctor role
+-- Doctors can view patients and medications
+-- Doctors can insert and update prescriptions
+-- ==========================================
+
+GRANT SELECT
+ON NHS_Trust_DB.Patients
+TO 'doctor_user'@'localhost';
+
