@@ -63,3 +63,21 @@ INSERT INTO Appointments (AppointmentDate, AppointmentTime, ClinicID, PatientID,
 ('2026-07-13', '08:30:00', 1, 13, 1, 'Routine', 'Scheduled'),
 ('2026-07-14', '15:30:00', 2, 14, 6, 'Flu', 'Scheduled'),
 ('2026-07-15', '16:00:00', 3, 15, 9, 'Pain', 'Scheduled');
+
+-- 6. PRESCRIPTIONS 
+INSERT INTO Prescriptions (AppointmentID, MedicationID, Dosage, DateIssued, PatientID, DoctorID) VALUES
+(1, 1, '500mg daily', '2026-06-25', 1, 1),
+(2, 2, 'Twice daily', '2026-06-26', 2, 2),
+(5, 5, 'Before bed', '2026-07-01', 5, 7),
+(6, 5, 'Before bed', '2026-07-02', 6, 7),
+(7, 1, 'As needed', '2026-07-03', 7, 1),
+(NULL, 10, 'Once daily', '2026-07-05', 8, NULL),
+(NULL, 3, 'Take with food', '2026-07-06', 9, NULL),
+(NULL, 4, 'Once daily', '2026-07-07', 10, NULL),
+(NULL, 6, 'Use at night', '2026-07-08', 11, NULL),
+(NULL, 7, 'Twice daily', '2026-07-09', 12, NULL),
+(NULL, 8, 'Once daily', '2026-07-10', 13, NULL),
+(NULL, 9, 'Before meals', '2026-07-13', 14, NULL),
+(NULL, 2, 'Finish course', '2026-07-14', 15, NULL),
+(NULL, 5, 'As needed', '2026-07-15', 16, NULL),
+(NULL, 1, '500mg', '2026-07-16', 17, NULL);
