@@ -45,3 +45,21 @@ INSERT INTO Doctors (ClinicID, DoctorName, DoctorSurname, Speciality, Email, Pho
 (3, 'Robert', 'Taylor', 'Neurologist', 'rtaylor@clinic.co.uk', 7700900007, '1978-01-14'),
 (3, 'Laura', 'Taylor', 'Neurologist', 'ltaylor@clinic.co.uk', 7700900008, '1983-09-05'),
 (3, 'James', 'Anderson', 'Orthopedist', 'janderson@clinic.co.uk', 7700900009, '1972-04-18');
+
+-- 5. APPOINTMENTS 
+INSERT INTO Appointments (AppointmentDate, AppointmentTime, ClinicID, PatientID, DoctorID, Diagnosis, Status) VALUES
+('2026-06-25', '09:00:00', 1, 1, 1, 'Hypertension', 'Completed'),
+('2026-06-26', '10:30:00', 1, 2, 2, 'Dermatitis', 'Completed'),
+('2026-06-29', '14:00:00', 2, 3, 4, 'Flu', 'Scheduled'),
+('2026-06-30', '16:00:00', 2, 4, 4, 'Check-up', 'Scheduled'),
+('2026-07-01', '11:00:00', 3, 5, 7, 'Migraine', 'Completed'),
+('2026-07-02', '09:00:00', 3, 6, 7, 'Stress', 'Scheduled'),
+('2026-07-03', '15:00:00', 1, 7, 1, 'Follow-up', 'Completed'),
+('2026-07-06', '10:00:00', 2, 8, 6, 'Growth check', 'Scheduled'),
+('2026-07-07', '14:00:00', 3, 9, 9, 'Knee pain', 'Scheduled'),
+('2026-07-08', '09:30:00', 1, 10, 3, 'Rash', 'Scheduled'),
+('2026-07-09', '11:00:00', 2, 11, 5, 'Eczema', 'Scheduled'),
+('2026-07-10', '13:00:00', 3, 12, 8, 'Vision test', 'Scheduled'),
+('2026-07-13', '08:30:00', 1, 13, 1, 'Routine', 'Scheduled'),
+('2026-07-14', '15:30:00', 2, 14, 6, 'Flu', 'Scheduled'),
+('2026-07-15', '16:00:00', 3, 15, 9, 'Pain', 'Scheduled');
