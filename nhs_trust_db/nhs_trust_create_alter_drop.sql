@@ -24,4 +24,8 @@ ADD COLUMN Description TEXT;
 
 TRUNCATE TABLE Specialities;
 
+-- D. DROP
+
+DROP TABLE Specialities;
+
  
